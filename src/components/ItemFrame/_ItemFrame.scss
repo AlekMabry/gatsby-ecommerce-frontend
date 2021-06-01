@@ -1,0 +1,32 @@
+.item-frame {
+    background-color: $color-background-secondary;
+    border-radius: 0.75em;
+    padding: 1em;
+
+    margin-left: calc(var(--hpad) / 2.0);
+    margin-right: calc(var(--hpad) / 2.0);
+
+    .title, h1, h2, h3, h4, h5, h6 {
+        color: $color-text-header;
+        font-weight: 700;
+        font-size: 1.2em;
+        margin-bottom: 0.2em;
+    }
+
+    p {
+        color: $color-text-secondary;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li:last-child {
+        padding-bottom: 0;
+    }
+
+    li {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+}

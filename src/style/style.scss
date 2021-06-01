@@ -1,0 +1,26 @@
+/* Global style and layouts */
+@import './colors';
+@import './fonts';
+@import './variables';
+@import './reset';
+@import './layout';
+
+/* Components */
+@import '../components/IcoText/IcoText';
+@import '../components/AccordianFrame/AccordianFrame';
+//@import '../components/SearchBar/SearchBar';
+@import '../components/ItemFrame/ItemFrame';
+
+@import '../components/CartIndicator/CartIndicator';
+@import '../components/CartMenu/CartMenu';
+@import '../components/CartProduct/CartProduct';
+@import '../components/Ribbon/Ribbon';
+@import '../components/HorizontalNavBar/HorizontalNavBar';
+@import '../components/VerticalNavBar/VerticalNavBar';
+@import '../components/DesktopHeader/DesktopHeader';
+@import '../components/MobileHeader/MobileHeader';
+
+@import '../components/CategorySelector/CategorySelector';
+@import '../components/Product/Product';
+
+@import '../components/Footer/Footer';

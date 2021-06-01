@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: $font-primary;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.2;
+}
+
+/* Padding. */
+:root {
+    --hpad: 2em;        // Standard horizontal pad
+    --vpad: 2em;        // Standard vertical pad
+    --hpad-site: 4em;   // Outside horizontal site padding
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: $color-text-header;
+}
+
+.checkbox {
+    input[type="checkbox"] {
+        width: 12px;
+        height: 12px;
+        display: none;
+    }
+
+    label {
+        position: relative;
+        padding-left: calc(12px + 0.5em);
+    }
+
+    label::before {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid $color-text-secondary;
+        border-radius: 4px;
+        background-color: $color-background-default;
+        transform: translateY(-50%);
+    }
+
+    label::after {
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border: none;
+        border-radius: 2px;
+        background-color: $color-text-header;
+        transform: translateY(-50%);
+    }
+
+    input[type="checkbox"] + label::after {
+        content: none;
+    }
+
+    input[type="checkbox"]:checked + label::after {
+        content: "";
+    }
+
+    input[type="checkbox"]:focus + label::before {
+        outline: $color-selected auto 1px;
+    }
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.3em;
+    padding: 0.4em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    margin-top: 0.5em;
+    text-align: left;
+    background-color: $color-selectable;
+    border: none;
+    color: $color-text-contrast-primary;
+}
+
+button:hover {
+    background-color: $color-selected;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: $width-screen-desktop-min) {
+    * {
+        font-size: 16px;
+    }
+
+    /* Padding. */
+    :root {
+        --hpad: 2em;
+        --vpad: 2em;
+        --hpad-site: 4em;
+    }
+}
+
+/* Tablet */
+@media only screen and 
+    (min-width: $width-screen-tablet-min) and 
+    (max-width: $width-screen-tablet-max) {
+    * {
+        font-size: 14px;
+    }
+    
+    /* Padding. */
+    :root {
+        --hpad: 2em;        // Standard horizontal pad
+        --vpad: 2em;        // Standard vertical pad
+        --hpad-site: 2em;   // Outside horizontal site padding
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: $width-screen-mobile-max) {
+    * {
+        font-size: 12px;
+    }
+
+    /* Padding. */
+    :root {
+        --hpad: 1.5em;        // Standard horizontal pad
+        --vpad: 1.5em;        // Standard vertical pad
+        --hpad-site: 1.5em;   // Outside horizontal site padding
+    }
+}

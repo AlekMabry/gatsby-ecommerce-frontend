@@ -1,0 +1,116 @@
+.product {
+    display: flex;
+    position: relative;
+
+    .promotion {
+        position: absolute;
+        top: -0.8em;
+        padding: 0.2em;
+        padding-right: 0.6em;
+        padding-left: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        background: $gradient-primary;
+        color: $color-text-contrast-primary;
+        border-radius: 0.2em;
+    }
+
+    .description-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price {
+        color: $color-text-primary;
+        font-weight: 400;
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-bottom: 0.2em;
+    }
+
+    .previous-price {
+        color: $color-text-secondary;
+        font-weight: 400;
+        text-decoration: line-through;
+        font-size: 0.8em;
+        margin-left: 0.5em;
+    }
+
+    .ratio-square-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    p {
+        line-height: 1.2;
+        margin-bottom: 1em;
+    }
+
+    button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: auto;
+
+        img {
+            position: static;
+            transform: none;
+            width: 1em;
+            height: 1em;
+            margin-top: 1px;
+        }
+    }
+}
+
+/* Desktop and Tablet */
+@media only screen and (min-width: $width-screen-tablet-min) {
+    .product {
+        flex-direction: column;
+
+        .promotion {
+            right: 0;
+        }
+
+        .ratio-square-container {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+
+        button {
+            margin-top: auto;
+        }
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: $width-screen-mobile-max) {
+    .product {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: calc(var(--vpad) / 2.0);
+        margin-bottom: calc(var(--vpad) / 2.0);
+
+        .promotion {
+            left: 0;
+        }
+
+        .ratio-square-container {
+            width: 10em;
+            height: 10em;
+        }
+
+        .description-container {
+            padding-left: 1em;
+        }
+    }
+}

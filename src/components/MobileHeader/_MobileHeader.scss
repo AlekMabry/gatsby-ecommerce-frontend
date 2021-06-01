@@ -1,0 +1,68 @@
+.mobile-header-container {
+    background-color: $color-background-primary;
+}
+
+.mobile-header {
+    padding: calc(var(--vpad) / 2.0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+    img {
+        height: 3.5em;
+    }
+
+    a {
+        color: $color-text-contrast-primary;
+        font-weight: 300;
+    }
+}
+
+.mobile-header-dropdown-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    padding: 0.5em;
+    margin: 0;
+    width: 3.5em;
+    height: 3.5em;
+    z-index: 4;
+
+    // img would break CartIndicator
+    .icon-img {
+        height: 80%;
+    }
+}
+
+.mobile-header-dropdown-button:hover {
+    background: none;
+}
+
+.mobile-header-dropdown {
+    position: relative;
+    width: 100vw;
+    background-color: $color-background-primary;
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: calc(var(--vpad) / 2.0);
+        padding-bottom: calc(var(--vpad) / 2.0);
+    }
+
+    .divider {
+        background-color: white;
+        color: white;
+        width: 1em;
+        height: 1px;
+    }
+
+    .ico-text {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}

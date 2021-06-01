@@ -1,0 +1,89 @@
+{
+    "ribbonMessages" : [
+        {
+            "message" : "This is a demo site. Click this to see the source.",
+            "href" : "https://127.0.0.1"
+        }
+    ],
+    "page" : {
+        "navigation" : [
+            {
+                "name" : "Home",
+                "url" : "http://127.0.0.1:8000/404"
+            },
+            {
+                "name" : "About",
+                "url" : "http://127.0.0.1:8000/404"
+            },
+            {
+                "name" : "Products",
+                "url" : "http://127.0.0.1:8000/404"
+            },
+            {
+                "name" : "Hardware",
+                "url" : "http://127.0.0.1:8000/404"
+            },
+            {
+                "name" : "Software",
+                "url" : "http://127.0.0.1:8000/404"
+            },
+            {
+                "name" : "Contact",
+                "url" : "http://127.0.0.1:8000/404"
+            }
+        ],
+        "footer" : {
+            "widgets" : [],
+            "text" : "<a href='127.0.0.1:8000/privacy-policy'>Privacy Policy</a> | Copyright &#169 2021 Aleksander Mabry"
+        }
+    },
+    "collections" : [
+        {
+            "name" : "Hardware",
+            "slug" : "hardware",
+            "categories" : [
+                {
+                    "name" : "Kit",
+                    "slug" : "kit"
+                },
+                {
+                    "name" : "AVR",
+                    "slug" : "avr"
+                }
+            ]
+        },
+        {
+            "name" : "Software",
+            "slug" : "software",
+            "categories" : [
+                {
+                    "name" : "Game Engine",
+                    "slug" : "game-engine"
+                }
+            ]
+        }
+    ],
+    "products" : [
+        {
+            "name" : "Smart Alek Robot Head",
+            "slug" : "smart-alek-robot-head",
+            "price" : 149.99,
+            "previousPrice" : 179.99,
+            "description" : "Customizable robot head kit with computer vision capabilities",
+            "thumbnail" : {
+                "url" : "http://127.0.0.1/images/products/RobotHead-Thumb.png" ,
+                "alt" : "Laser-cut robot head tracking orange ball"
+            }
+        },
+        {
+            "name" : "Handheld Game Console",
+            "slug" : "handheld-game-console",
+            "price" : 9.99,
+            "description" : "An AVR powered handheld console with a 3D game engine.",
+            "thumbnail" : {
+                "url" : "http://127.0.0.1/images/products/HandheldConsole-Thumb.png",
+                "alt" : "Handheld game console PCB with display and AVR processor"
+            }
+        }
+    ]
+}

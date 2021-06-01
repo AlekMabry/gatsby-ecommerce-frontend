@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECommerce</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Page Container -->
+    <div class="page-container">
+        <!-- Ad Ribbon -->
+        <div class="ribbon-container">
+            <div class="ribbon">Robot Head Kits 25% off for Cyber Monday</div>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </div>
+        <!-- Brand Bar -->
+        <div class="brandbar-container">
+            <div class="brandbar">
+                <img src="assets/img/nav-logo.svg"/>
+                <div class="contact">
+                    <a href="#" class="ico-text"><img src="assets/img/ico/ico-location">Visit Us<br>Raleigh, NC</a>
+                    <div class="divider"></div>
+                    <a href="#" class="ico-text"><img src="assets/img/ico/ico-call">+1 (555) 481-8336</a>
+                    <div class="divider"></div>
+                    <a href="#" class="ico-text"><img src="assets/img/ico/ico-mail">Contact Us</a>
+                    <div class="divider"></div>
+                    <div class="cart-container">
+                        <button class="cart-indicator">
+                            <div class="cart">
+                                <img src="assets/img/ico/ico-cart.svg">
+                                <div class="cart-item-count">2</div>
+                            </div>
+                            Cart &<br>Account
+                        </button>
+                        <div class="cart-menu">
+                            <a href="#">Log In</a>
+                            <a href="#">Create Account</a>
+                            <div class="title">2 Items in Cart:</div>
+                            <div class="price-container">
+                                <div class="price">Total: $159.98</div>
+                                <div class="savings">Saving: $60.00</div>
+                            </div>
+                            <button>Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Bar -->
+        <div class="navbar-container">
+            <navbar>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Kits</a></li>
+                    <li><a href="#">Parts</a></li>
+                    <li><a href="#">Programs</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                </ul>
+            </navbar>
+        </div>
+        <!-- Body -->
+        <div class="body-container">
+            <!-- Side Bar -->
+            <div class="sidebar">
+                <div class="item-frame">
+                    <div class="dropdown-title-container">
+                        <div class="title">Products</div>
+                        <button type="button" class="dropdown-button"></button>
+                    </div>
+                    <form>
+                        <ul>
+                            <li class="checkbox">
+                                <input type="checkbox" id="category_kits"><label for="category_kits">Kits</label>
+                            </li>
+                            <li class="checkbox">
+                                <input type="checkbox" id="category_parts"><label for="category_parts">Parts</label>
+                            </li>
+                            <li class="checkbox">
+                                <input type="checkbox" id="category_programs"><label for="category_programs">Programs</label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Title -->
+                <div class="search-container">
+                    <h1 style="flex: 1;">Kits & Programs</h1>
+                    <form style="flex: 1;" class="searchbar">
+                        <input type="text" id="search" name="search" value="Search"><input type="submit" value="">
+                    </form>
+                </div>
+                <!-- Products -->
+                <div class="products">
+                    <!-- Product -->
+                    <div class="item-frame product">
+                        <div class="promotion">Sale</div>
+                        <div class="ratio-square-container">
+                            <img src="assets/img/products/RobotHead-StorePage.png">
+                        </div>
+                        <h2>Smart Alek Robot Head</h2>
+                        <div class="price">$149.99<span class="previous-price">$199.99</span></div>
+                        <p>Customizable robot head kit
+                            with computer vision capabilities.</p>
+                        <button type="button"><div>Add to Cart</div><img src="assets/img/ico/ico-cart.svg"></button>
+                    </div>
+                    <!-- Product -->
+                    <div class="item-frame product">
+                        <div class="promotion">Sale</div>
+                        <div class="ratio-square-container">
+                            <img src="assets/img/products/BeagleAnimate-StorePage.png">
+                        </div>
+                        <h2>Beagle Animate</h2>
+                        <div class="price">$19.99<span class="previous-price">$9.99</span></div>
+                        <p>General purpose animatronic animation program.</p>
+                        <button type="button"><div>Add to Cart</div><img src="assets/img/ico/ico-cart.svg"></button>
+                    </div>
+                    <!-- Product -->
+                    <div class="item-frame product">
+                        <div class="ratio-square-container">
+                            <img src="assets/img/products/HandheldConsole-StorePage.png">
+                        </div>
+                        <h2>Handheld Console</h2>
+                        <div class="price">$9.99</div>
+                        <p>AVR powered handheld console kit with 3D graphics engine.</p>
+                        <button type="button"><div>Add to Cart</div><img src="assets/img/ico/ico-cart.svg"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer-container">
+        <hr>
+        <footer>
+            <div class="footer-widgets">
+                <div class="footer-widget">
+                    <div class="title">Contact</div>
+                    <ul>
+                        <li>
+                            <a class="ico-text" href="#">+1 (555) 481-8336<img src="assets/img/ico/ico-call-secondary.svg"></a>
+                        </li>
+                        <li>
+                            <a class="ico-text" href="#">help@alekstutorials.com<img src="assets/img/ico/ico-mail-secondary.svg"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <div class="title">Accounts</div>
+                    <ul>
+                        <li><a href="#">Track your Order</a></li>
+                        <li><a href="#">Admin Login (Demo)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget right-widget-start">
+                    <div class="title">Don't Miss our Latest Tutorials!</div>
+                    <form>
+                        <label for="email">Subscribe to our email list:</label><br>
+                        <input type="text" id="email" name="email">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-text"><a href="#">Privacy Policy</a> | Copyright &#169 2021 Alek</div>
+        </footer>
+    </div>
+</body>
+</html>
