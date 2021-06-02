@@ -1,6 +1,6 @@
 import React from 'react';
 import HorizontalNavBar from '../HorizontalNavBar/HorizontalNavBar';
-import { brandLogo, contactInfo } from '../../global/siteConfig';
+import { brandLogo, contactInfo } from '../../config/siteConfig';
 
 import icoLocation from '../../images/ico/ico-location.svg';
 import icoCall from '../../images/ico/ico-call.svg';

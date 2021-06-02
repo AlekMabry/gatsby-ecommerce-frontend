@@ -2,4 +2,29 @@
     background-color: $color-background-secondary;
     border-radius: 0.5em;
     padding: 1em;
+    margin-left: var(--hpad);
+    margin-right: var(--hpad);
+
+    .price {
+        color: $color-text-primary;
+        font-weight: 400;
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-bottom: 0.2em;
+    }
+
+    .previous-price {
+        color: $color-text-secondary;
+        font-weight: 400;
+        text-decoration: line-through;
+        font-size: 0.8em;
+        margin-left: 0.5em;
+    }
+
+    .title {
+        color: $color-text-header;
+        font-weight: 700;
+        font-size: 1.2em;
+        margin-bottom: 0.2em;
+    }
 }

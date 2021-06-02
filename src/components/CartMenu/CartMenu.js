@@ -1,30 +1,16 @@
 import React from 'react';
-import CartIndicator from '../CartIndicator/CartIndicator';
+import CartProduct from '../CartProduct/CartProduct';
+import { useCartContext } from '../../contexts/CartContextProvider';
 
-class CartMenu extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+function CartMenu(props) {
+    const cartContext = useCartContext();
+    const cartItems = cartContext.items.map(item => 
+        <CartProduct product={item}/>
+    )
 
-    /*
-    <div class="cart-menu">
-                    <div class="title">2 Items in Cart:</div>
-                        <div class="price-container">
-                        <div class="price">Total: $159.98</div>
-                        <div class="savings">Saving: $60.00</div>
-                    </div>
-                    <button>Checkout</button>
-                </div>
-    */
-    render() {
-        return (
-            <div class="cart-container">
-                <CartIndicator itemCount="2"/>     
-                
-            </div>
-            
-        );
-    }
+    return (
+        <>{cartItems}</>
+    );
 }
 
 export default CartMenu;

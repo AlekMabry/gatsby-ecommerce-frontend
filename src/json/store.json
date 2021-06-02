@@ -65,6 +65,7 @@
     ],
     "products" : [
         {
+            "id" : 1,
             "name" : "Smart Alek Robot Head",
             "slug" : "smart-alek-robot-head",
             "price" : 149.99,
@@ -76,6 +77,7 @@
             }
         },
         {
+            "id" : 2,
             "name" : "Handheld Game Console",
             "slug" : "handheld-game-console",
             "price" : 9.99,

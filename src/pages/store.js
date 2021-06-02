@@ -4,7 +4,6 @@ import '../style/style.css';
 import Page from '../components/Page/Page';
 import Product from '../components/Product/Product';
 import CategorySelector from '../components/CategorySelector/CategorySelector';
-import CartContext from '../global/CartContext';
 
 import data from '../json/store.json';
 //import { graphql, useStaticQuery } from 'gatsby';

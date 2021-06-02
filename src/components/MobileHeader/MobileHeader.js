@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import CartIndicator from '../CartIndicator/CartIndicator';
 import VerticalNavBar from '../VerticalNavBar/VerticalNavBar';
 import IcoText from '../IcoText/IcoText';
+import CartMenu from '../CartMenu/CartMenu';
 
 import icoHamburger from '../../images/ico/ico-hamburger.svg';
 import icoExit from '../../images/ico/ico-exit.svg';
@@ -25,7 +26,7 @@ const MENU_CART = 2;
 
 function MobileHeaderBar(props) {
     const [state, setState] = useState(MENU_CLOSED);
-
+    
     function closeMenu(e) {
         e.preventDefault();
         setState(MENU_CLOSED);
@@ -97,12 +98,7 @@ function MobileHeaderBar(props) {
                         </div>
                     </div>
                     <div class="mobile-header-dropdown">
-                        <VerticalNavBar navigation={props.navigation}/>
-                        <div class="contact">
-                            <IcoText href="#" icon={icoLocation}>Visit us in Raleigh, NC</IcoText>
-                            <IcoText href="tel:+1555-481-8336" icon={icoCall}>+1 (555) 481-8336</IcoText>
-                            <IcoText href="#" icon={icoMail}>Contact Us</IcoText>
-                        </div>
+                        <CartMenu/>
                     </div>
                 </>
             );

@@ -2,6 +2,7 @@ import React from 'react';
 import Ribbon from '../Ribbon/Ribbon'
 import HeaderBar from '../Header/Header';
 import Footer from '../Footer/Footer';
+import CartContextProvider from '../../contexts/CartContextProvider';
 
 /**
  * Page with header and footer.
@@ -9,14 +10,13 @@ import Footer from '../Footer/Footer';
  * @param {*} props.children 
  * @param {*} props.ribbonMessages
  */
-
 function Page(props) {
     const ribbons = props.ribbonMessages.map((ribbon) => 
         <Ribbon ribbon={ribbon}/>
     );
 
     return (
-        <>
+        <CartContextProvider>
             <div class="page-container">
                 {ribbons}
                 <HeaderBar navigation={props.page.navigation} meta={props.page.meta}/>
@@ -25,7 +25,7 @@ function Page(props) {
                 </div>
                 <Footer footer={props.page.footer}/>
             </div>
-        </>
+        </CartContextProvider>
     );
 }
 
