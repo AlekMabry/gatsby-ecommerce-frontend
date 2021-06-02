@@ -1,37 +1,43 @@
 import React from 'react';
+import { useCartUpdateContext, ACTIONS } from "../../contexts/CartContextProvider";
 import icoCart from "../../images/ico/ico-cart.svg"
 
-class Product extends React.Component {
-    constructor(props) {
-        super(props);
+function Product(props) {
+    const cartUpdate = useCartUpdateContext();
 
-        this.priceStr = '$' + this.props.product.price;
-        this.previousPriceStr = this.props.product.previousPrice ? 
-            '$' + this.props.product.previousPrice : null;
-        this.promotion =
-            this.props.product.previousPrice ?
-            <div class="promotion">Sale</div> : null;
+    function addToCart() {
+        
+        let action = {
+            type: ACTIONS.ADD_ITEM,
+            payload: props.product,
+        };
+        cartUpdate(action);
     }
 
-    render() {
-        return (
-            <div class="item-frame product">
-                {this.promotion}
-                <div class="ratio-square-container">
-                    <img src={this.props.product.thumbnail.url} alt={this.props.product.thumbnail.alt}></img>
-                </div>
-                <div class="description-container">
-                    <h2>{this.props.product.name}</h2>
-                    <div class="price">{this.priceStr}<span class="previous-price">{this.previousPriceStr}</span></div>
-                    <p>{this.props.product.description}</p>
-                    <button type="button">
-                        <div>Add to Cart</div>
-                        <img src={icoCart} alt=""></img>
-                    </button>
-                </div>
+    let priceStr = '$' + props.product.price;
+    let previousPriceStr = props.product.previousPrice ? 
+        '$' + props.product.previousPrice : null;
+    let promotion =
+        props.product.previousPrice ?
+        <div class="promotion">Sale</div> : null;
+
+    return (
+        <div class="item-frame product">
+            {promotion}
+            <div class="ratio-square-container">
+                <img src={props.product.thumbnail.url} alt={props.product.thumbnail.alt}></img>
             </div>
-        );
-    }
+            <div class="description-container">
+                <h2>{props.product.name}</h2>
+                <div class="price">{priceStr}<span class="previous-price">{previousPriceStr}</span></div>
+                <p>{props.product.description}</p>
+                <button type="button" onClick={addToCart}>
+                    <div>Add to Cart</div>
+                    <img src={icoCart} alt=""></img>
+                </button>
+            </div>
+        </div>
+    );
 }
 
 export default Product

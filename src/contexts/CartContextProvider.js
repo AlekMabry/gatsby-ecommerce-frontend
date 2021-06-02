@@ -17,7 +17,7 @@ import React, { useReducer, createContext, useContext } from 'react';
  * 
  *      import { useCartUpdateContext, ACTIONS } from 'CartContextProvider';
  *      const cartUpdate = useCartUpdateContext();
- *      cartUpdate(ACTIONS.ACTION_NAME, payload);
+ *      cartUpdate({ action: ACTIONS.ACTION_NAME, payload: payload });
  */
 
 /**
@@ -53,6 +53,7 @@ function updatePrice(state) {
 function addItem(state, product) {
     let i = state.items.findIndex(item => item.id === product.id);
     let newState = { ...state };
+    newState.itemCount++;
     if (i >= 0) {
         // Increment existing item in cart.
         newState.items[i].amount++;
@@ -65,6 +66,7 @@ function addItem(state, product) {
             slug: product.slug,
             price: product.price,
             previousPrice: prevPrice,
+            thumbnail: { url: product.thumbnail.url, alt: product.thumbnail.alt },
             amount: 1,
         };
         newState.items.push(newItem);
@@ -82,6 +84,7 @@ function addItem(state, product) {
 function removeItem(state, id) {
     let i = state.items.findIndex(item => item.id === id);
     let newState = { ...state };
+    newState.itemCount--;
     if (i >= 0) {
         if (state.items[i].amount == 1) {
             // Delete item from cart.
@@ -125,6 +128,10 @@ export function useCartContext() {
     return useContext(CartContext);
 }
 
+export function useCartUpdateContext() {
+    return useContext(CartUpdateContext);
+}
+
 function CartContextProvider(props) {
     const [cart, dispatch] = useReducer(reducer, 
         { items: [
@@ -133,12 +140,16 @@ function CartContextProvider(props) {
             slug: "smart-alek-robot-head",
             price: 149.99,
             previousPrice: 179.99,
+            thumbnail : {
+                url : "http://127.0.0.1/images/products/RobotHead-Thumb.png" ,
+                alt : "Laser-cut robot head tracking orange ball",
+            },
             amount: 2}
         ],
-        itemCount: 0 });
+        itemCount: 1 });
 
-    function modifyCart(action, payload) {
-        dispatch({ type: action, payload: payload });
+    function modifyCart(action) {
+        dispatch(action);
     }
 
     return (

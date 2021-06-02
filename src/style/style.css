@@ -442,6 +442,9 @@ body {
   padding: 1em;
   margin-left: var(--hpad);
   margin-right: var(--hpad);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cart-product .price {
@@ -449,7 +452,6 @@ body {
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.5;
-  margin-bottom: 0.2em;
 }
 
 .cart-product .previous-price {
@@ -465,6 +467,29 @@ body {
   font-weight: 700;
   font-size: 1.2em;
   margin-bottom: 0.2em;
+}
+
+.cart-product .description-container {
+  padding-left: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-product .ratio-square-container {
+  width: 3em;
+  height: 3em;
+}
+
+.cart-product img {
+  width: 100%;
 }
 
 .ribbon-container {

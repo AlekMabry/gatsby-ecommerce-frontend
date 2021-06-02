@@ -3,6 +3,7 @@ import React from 'react';
 /**
  * A product with modifiable count displayed in the cart menu.
  * @param {string} props.product.id ID of product.
+ * @param {string} props.product.thumbnail.url URL of thumbnail.
  * @param {string} props.product.name Name of product.
  * @param {string} props.product.slug Slug of product for link.
  * @param {float} props.product.price Price of product.
@@ -16,8 +17,13 @@ function CartProduct(props) {
 
     return (
         <div class="cart-product">
-            <h2>{props.product.name}</h2>
-            <div class="price">{priceStr}<span class="previous-price">{previousPriceStr}</span></div>
+            <div class="ratio-square-container">
+                <img src={props.product.thumbnail.url} alt=""/>
+            </div>
+            <div class="description-container">
+                <span class="title">{props.product.name}</span>
+                <div class="price">{priceStr}<span class="previous-price">{previousPriceStr}</span></div>
+            </div>
         </div>
     );
 }

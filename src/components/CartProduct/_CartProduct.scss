@@ -4,13 +4,13 @@
     padding: 1em;
     margin-left: var(--hpad);
     margin-right: var(--hpad);
+    display: flex;
 
     .price {
         color: $color-text-primary;
         font-weight: 400;
         font-size: 1.2em;
         line-height: 1.5;
-        margin-bottom: 0.2em;
     }
 
     .previous-price {
@@ -26,5 +26,21 @@
         font-weight: 700;
         font-size: 1.2em;
         margin-bottom: 0.2em;
+    }
+
+    .description-container {
+        padding-left: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ratio-square-container {
+        width: 3em;
+        height: 3em;
+    }
+
+    img {
+        width: 100%;
     }
 }
